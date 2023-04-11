@@ -1,0 +1,9 @@
+{
+  "name": "@bytedo/store",
+  "version": "0.0.0",
+  "description": "indexedDB 操作库",
+  "main": "dist/index.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT"
+}
