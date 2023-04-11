@@ -1,9 +1,21 @@
 {
   "name": "@bytedo/store",
+  "type": "module",
   "version": "0.0.0",
   "description": "indexedDB 操作库",
   "main": "dist/index.js",
-  "scripts": {},
-  "author": "",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build:next": "esbuild src/index.js --minify --bundle --format=esm --target=esnext --outfile=dist/index.js",
+    "build:es6": "esbuild src/index.js --minify --bundle --format=esm --target=es6 --outfile=dist/index.es6.js",
+    "build": "npm run build:next && npm run build:es6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bd-js/core.git"
+  },
+  "author": "yutent",
   "license": "MIT"
 }
