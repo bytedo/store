@@ -4,7 +4,37 @@
  * @date 2020/08/31 15:46:20
  */
 
-import Method from './method.js'
+class Method {
+  constructor(table) {
+    this.table = table
+  }
+
+  put(obj) {
+    this.table.put(obj)
+  }
+
+  get(id) {
+    var res = this.table.get(id)
+    return new Promise(resolve => {
+      res.onsuccess = function (ev) {
+        resolve(this.result)
+      }
+    })
+  }
+
+  getAll() {
+    var res = this.table.getAll()
+    return new Promise(resolve => {
+      res.onsuccess = function (ev) {
+        resolve(this.result)
+      }
+    })
+  }
+
+  delete(id) {
+    this.table.delete(id)
+  }
+}
 
 export default class Api {
   constructor(db) {

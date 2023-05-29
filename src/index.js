@@ -4,7 +4,7 @@
  * @date 2023/04/11 15:10:04
  */
 
-import { defer, createTable } from './helper.js'
+import { defer } from './helper.js'
 import Api from './api.js'
 
 export function createStore(name, version = 1) {
